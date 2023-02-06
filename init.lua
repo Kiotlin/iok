@@ -1,0 +1,10 @@
+require("ri1ken.keymaps")
+require("ri1ken.options")
+require("ri1ken.plugins")
+require("ri1ken.colorscheme")
+require("ri1ken.cmp")
+require("ri1ken.telescope")
+require("ri1ken.whichkey")
+require("ri1ken.alpha")
+
+require("impatient")
