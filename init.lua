@@ -6,5 +6,6 @@ require("ri1ken.cmp")
 require("ri1ken.telescope")
 require("ri1ken.whichkey")
 require("ri1ken.alpha")
+require("ri1ken.treesitter")
 
 require("impatient")
