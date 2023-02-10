@@ -43,7 +43,10 @@ return require('packer').startup(function(use)
   use "wbthomason/packer.nvim"
   use "nvim-lua/plenary.nvim" -- Dependency which implements some useful window management
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "shaunsingh/nord.nvim" -- Neovim theme based off of the Nord Color Palette
+
+  -- colorscheme
+  -- use "shaunsingh/nord.nvim" -- Neovim theme based off of the Nord Color Palette
+  use "marko-cerovac/material.nvim"
   
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
