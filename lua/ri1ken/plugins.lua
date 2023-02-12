@@ -59,7 +59,24 @@ return require('packer').startup(function(use)
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
+
+  -- treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+        ts_update()
+    end,
+  }
+
+  -- file explorer
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- for file icons
+    },
+    tag = 'nightly' -- updated every week 
+  }
 
   -- surround: Add/change/delete surrouding delimiter pairs
   use({
@@ -75,9 +92,12 @@ return require('packer').startup(function(use)
   -- whichkey
   use "folke/which-key.nvim"
 
-  -- alpha
+  -- dashboard
   use "goolord/alpha-nvim"
 
+  -- git support
+  use "lewis6991/gitsigns.nvim"
+  
   -- impatient
   use "lewis6991/impatient.nvim"
 
@@ -86,6 +106,16 @@ return require('packer').startup(function(use)
     'numToStr/Comment.nvim',
     config = function()
         require('Comment').setup()
+    end
+  }
+
+  -- Move & Motion
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
 
