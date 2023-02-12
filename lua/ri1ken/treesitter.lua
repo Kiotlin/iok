@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  -- theme = "nord",
+  theme = "material",
   ensure_installed = "all", -- "all" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
@@ -22,16 +22,4 @@ configs.setup {
     enable_autocmd = false,
   },
 }
-
--- vim.opt.foldmethod     = 'expr'
--- vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
----WORKAROUND
-vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
-  group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
-  callback = function()
-    vim.opt.foldmethod     = 'expr'
-    vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
-  end
-})
----ENDWORKAROUND
 
