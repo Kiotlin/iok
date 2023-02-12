@@ -79,7 +79,12 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  a = {
+    name = "Hop",
+    a = { "<cmd>HopWord<cr>", "Hop Word" },
+    s = { "<cmd>HopLine<cr>", "Hop Line" },
+    f = { "<cmd>HopPattern<cr>", "Hop Pattern" },
+  },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
