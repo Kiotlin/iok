@@ -89,7 +89,7 @@ require("alpha.term")
 
 local dynamic_header = {
   type = "terminal",
-  command = "chafa -c full --fg-only --symbols braille ~/.config/nvim/KG2000VIM/static/db.gif",
+  command = "chafa -c full --fg-only --symbols braille ~/.config/nvim/static/db.gif",
   width = 90,
   height = 20,
   opts = {
