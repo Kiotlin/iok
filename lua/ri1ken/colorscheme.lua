@@ -1,11 +1,5 @@
 local colorscheme = "material"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. "not found!")
-  return
-end
-
 require('material').setup({
 
     contrast = {
@@ -18,10 +12,10 @@ require('material').setup({
     },
 
     styles = { -- Give comments style such as bold, italic, underline etc.
-        comments = { --[[italic = true]] },
+        comments = { italic = true },
         strings = { bold = true },
         keywords = { --[[ underline = true ]] },
-        functions = { --[[ bold = true, undercurl = true ]] },
+        functions = { bold = true, undercurl = true },
         variables = {},
         operators = {},
         types = {},
@@ -32,7 +26,7 @@ require('material').setup({
         -- "dap",
         -- "dashboard",
         -- "gitsigns",
-        -- "hop",
+        "hop",
         -- "indent-blankline",
         -- "lspsaga",
         -- "mini",
@@ -44,7 +38,7 @@ require('material').setup({
         -- "sneak",
         -- "telescope",
         -- "trouble",
-        -- "which-key",
+        "which-key",
     },
 
     disable = {
@@ -69,3 +63,8 @@ require('material').setup({
     custom_highlights = {}, -- Overwrite highlights with your own
 })
 
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+  vim.notify("colorscheme " .. colorscheme .. "not found!")
+  return
+end
