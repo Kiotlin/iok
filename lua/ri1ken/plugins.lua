@@ -125,6 +125,9 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Toggle Terminal
+  use "akinsho/toggleterm.nvim"
+
   -- Automatically set up configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
