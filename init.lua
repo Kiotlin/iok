@@ -9,5 +9,6 @@ require("ri1ken.alpha")
 require("ri1ken.treesitter")
 require("ri1ken.nvimtree")
 require("ri1ken.gitsigns")
+require("ri1ken.lualine")
 
 require("impatient")

@@ -95,6 +95,12 @@ return require('packer').startup(function(use)
   -- dashboard
   use "goolord/alpha-nvim"
 
+  -- status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
   -- git support
   use "lewis6991/gitsigns.nvim"
   
