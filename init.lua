@@ -11,5 +11,6 @@ require("ri1ken.nvimtree")
 require("ri1ken.gitsigns")
 require("ri1ken.lualine")
 require("ri1ken.toggleterm")
+require("ri1ken.bufferline")
 
 require("impatient")

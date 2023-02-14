@@ -96,10 +96,10 @@ return require('packer').startup(function(use)
   use "goolord/alpha-nvim"
 
   -- status line
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use "nvim-lualine/lualine.nvim"
+  -- buffer line
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
 
   -- git support
   use "lewis6991/gitsigns.nvim"
@@ -127,6 +127,8 @@ return require('packer').startup(function(use)
 
   -- Toggle Terminal
   use "akinsho/toggleterm.nvim"
+  -- Toggle Ranger
+  use "kevinhwang91/rnvimr"
 
   -- Automatically set up configuration after cloning packer.nvim
   -- Put this at the end after all plugins

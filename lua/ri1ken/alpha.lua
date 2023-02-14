@@ -129,7 +129,8 @@ local buttons = {
   type = "group",
   val = {
     button("f", " -> Find file", ":Telescope find_files <CR>"),
-    button("e", " -> New file", ":ene <BAR> startinsert <CR>"),
+    -- button("e", " -> New file", ":ene <BAR> startinsert <CR>"),
+    button("e", " -> New file", ":RnvimrToggle <CR>"),
     button("p", " -> Find project", ":Telescope projects <CR>"),
    -- button("r", " -> Recently used files", ":Telescope oldfiles <CR>"),
    -- button("t", " -> Find text", ":Telescope live_grep <CR>"),
