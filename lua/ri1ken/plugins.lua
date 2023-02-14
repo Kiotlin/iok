@@ -68,6 +68,7 @@ return require('packer').startup(function(use)
         ts_update()
     end,
   }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- file explorer
   use {
