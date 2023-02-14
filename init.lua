@@ -12,5 +12,6 @@ require("ri1ken.gitsigns")
 require("ri1ken.lualine")
 require("ri1ken.toggleterm")
 require("ri1ken.bufferline")
+require("ri1ken.comment")
 
 require("impatient")
