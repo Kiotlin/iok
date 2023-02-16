@@ -13,5 +13,6 @@ require("user.lualine")
 require("user.toggleterm")
 require("user.bufferline")
 require("user.comment")
+require("user.hop")
 
 require("impatient")
