@@ -53,9 +53,15 @@ return require('packer').startup(function(use)
   use "hrsh7th/cmp-buffer" -- Buffer completions
   use "hrsh7th/cmp-path" -- Path completions
   use "hrsh7th/cmp-cmdline" -- Cmdline completions
-  -- snippets
-  use "dcampos/nvim-snippy"
-  use "dcampos/cmp-snippy"
+  -- cmp snippet
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-nvim-lua"
+  use "rafamadriz/friendly-snippets"
+
+  -- lsp
+  use "neovim/nvim-lspconfig"
+  use "hrsh7th/cmp-nvim-lsp" 
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
