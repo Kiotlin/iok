@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
   -- impatient
   use "lewis6991/impatient.nvim"
 
-  -- comment.nvim
+  -- utility plugins
   use "numToStr/Comment.nvim"
 
   -- Move & Motion
