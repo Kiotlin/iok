@@ -130,6 +130,9 @@ return require('packer').startup(function(use)
   -- Toggle Ranger
   use "kevinhwang91/rnvimr"
 
+  ---------------- language support ----------------
+  use "lervag/vimtex"
+
   -- Automatically set up configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
