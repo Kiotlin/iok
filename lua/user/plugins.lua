@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   -- colorscheme
   -- use "shaunsingh/nord.nvim" -- Neovim theme based off of the Nord Color Palette
   use "marko-cerovac/material.nvim"
-  
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- Buffer completions
@@ -61,7 +61,9 @@ return require('packer').startup(function(use)
 
   -- lsp
   use "neovim/nvim-lspconfig"
-  use "hrsh7th/cmp-nvim-lsp" 
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+  use "hrsh7th/cmp-nvim-lsp"
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
@@ -70,29 +72,23 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
-        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-        ts_update()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
     end,
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- file explorer
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- for file icons
-    },
-    tag = 'nightly' -- updated every week 
-  }
+  use "nvim-tree/nvim-tree.lua"
 
   -- surround: Add/change/delete surrouding delimiter pairs
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
     end
   })
 
@@ -110,12 +106,19 @@ return require('packer').startup(function(use)
 
   -- git support
   use "lewis6991/gitsigns.nvim"
-  
+
   -- impatient
   use "lewis6991/impatient.nvim"
 
-  -- utility plugins
+  ---------------- utility plugins ----------------
+  -- comment
   use "numToStr/Comment.nvim"
+  -- autosave
+  use "https://git.sr.ht/~nedia/auto-save.nvim"
+  -- autopairs
+  use "windwp/nvim-autopairs"
+  -- lastplace: save your cursor position
+  use "ethanholz/nvim-lastplace"
 
   -- Move & Motion
   use "phaazon/hop.nvim"
