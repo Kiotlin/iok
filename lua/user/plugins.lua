@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "hrsh7th/cmp-nvim-lsp"
+  use 'folke/trouble.nvim'
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
@@ -80,6 +81,7 @@ return require('packer').startup(function(use)
 
   -- file explorer
   use "nvim-tree/nvim-tree.lua"
+  use "nvim-tree/nvim-web-devicons"
 
   -- surround: Add/change/delete surrouding delimiter pairs
   use({

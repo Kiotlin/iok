@@ -18,5 +18,6 @@ require("user.autosave")
 require("user.lsp")
 require("user.autopairs")
 require("user.lastplace")
+require("user.trouble")
 
 require("impatient")
