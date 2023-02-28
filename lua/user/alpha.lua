@@ -128,10 +128,10 @@ local date_today = {
 local buttons = {
   type = "group",
   val = {
-    button("f", " -> Find file", ":Telescope find_files <CR>"),
+    button("f", " -> Find file in this directory", ":Telescope find_files <CR>"),
     -- button("e", " -> New file", ":ene <BAR> startinsert <CR>"),
     -- button("e", " -> New file", ":RnvimrToggle <CR>"),
-    button("e", " -> Open file", ":Telescope file_browser <CR>"),
+    button("e", " -> Open file", ":Telescope file_browser hidden=true <CR>"),
     button("p", " -> Find project", ":Telescope projects <CR>"),
    -- button("r", " -> Recently used files", ":Telescope oldfiles <CR>"),
    -- button("t", " -> Find text", ":Telescope live_grep <CR>"),
