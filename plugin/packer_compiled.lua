@@ -235,6 +235,11 @@ _G.packer_plugins = {
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/rnvimr",
     url = "https://github.com/kevinhwang91/rnvimr"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/telescope.nvim",
