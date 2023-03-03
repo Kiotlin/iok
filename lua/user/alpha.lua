@@ -85,36 +85,27 @@ Header = {
 }
 
 -- Config gif header
-require("alpha.term")
+-- require("alpha.term")
+--
+-- local dynamic_header = {
+--   type = "terminal",
+--   command = "chafa -c full --fg-only --symbols braille ~/.config/nvim/static/db.gif",
+--   width = 90,
+--   height = 20,
+--   opts = {
+--     position = "center",
+--     redraw = true,
+--     window_config = {},
+--   },
+-- }
 
-local dynamic_header = {
-  type = "terminal",
-  command = "chafa -c full --fg-only --symbols braille ~/.config/nvim/static/db.gif",
-  width = 90,
-  height = 20,
-  opts = {
-    position = "center",
-    redraw = true,
-    window_config = {},
-  },
-}
- 
 local text_header = {
   type = "text",
   val = Header,
   opts = {
     position = "center",
-    hl = "Type",
   }
 }
-
---[[ local default_header = nil
-local ret = "command -v chafa"
-
-if ret == 0 
-  default_header = dynamic_header
-else
-  default_header = text_header ]]
 
 local date_today = {
   type = "text",
@@ -128,11 +119,11 @@ local date_today = {
 local buttons = {
   type = "group",
   val = {
-    button("f", " -> Find file in this directory", ":Telescope find_files <CR>"),
-    -- button("e", " -> New file", ":ene <BAR> startinsert <CR>"),
+    -- button("f", " -> Find file in this directory", ":Telescope find_files <CR>"),
+    button("e", " -> New file", ":ene <BAR> startinsert <CR>"),
     -- button("e", " -> New file", ":RnvimrToggle <CR>"),
-    button("e", " -> Open file", ":Telescope file_browser hidden=true <CR>"),
-    button("p", " -> Find project", ":Telescope projects <CR>"),
+    button("n", "󰩉 -> Open file", ":Telescope file_browser hidden=true <CR>"),
+    button("s", " -> Recent Sessions", ":lua require('session-lens').search_session() <CR>"),
    -- button("r", " -> Recently used files", ":Telescope oldfiles <CR>"),
    -- button("t", " -> Find text", ":Telescope live_grep <CR>"),
     button("c", " -> Configuration", ":e ~/.config/nvim/init.lua <CR>"),
@@ -145,7 +136,6 @@ local buttons = {
 
 local plugins = get_plugins_list()
 local plugins_count = #plugins
---[[ local plugins_str = "- Neovim with plugins installed -" ]]
 
 local footer = {
   type = "text",
@@ -158,7 +148,7 @@ local footer = {
 }
 
 local section = {
-  header = dynamic_header,
+  header = text_header,
   date = date_today,
   buttons = buttons,
   footer = footer,
@@ -168,11 +158,11 @@ local opts = {
   layout = {
     { type = "padding", val = 5 },
     section.header,
-    { type = "padding", val = 18 },
+    { type = "padding", val = 2 },
     section.date,
     { type = "padding", val = 2 },
     section.buttons,
-    { type = "padding", val = 1 },
+    { type = "padding", val = 2 },
     section.footer,
     { type = "padding", val = 5 },
   },
