@@ -85,6 +85,7 @@ local mappings = {
     s = { "<cmd>HopLine<cr>", "Hop Line" },
     f = { "<cmd>HopPattern<cr>", "Hop Pattern" },
   },
+  ["A"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -94,12 +95,14 @@ local mappings = {
   ["q"] = { "<cmd>quitall!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
+  ["s"] = { "<cmd>lua require('session-lens').search_session()<cr>", "Sessions"},
+  f = {
+    name = "File Navigation",
+    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+      "Find files" },
+    g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Grep Text" },
+    b = { "<cmd>Telescope file_browser hidden=true<cr>", "file browser"},
   },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
   p = {
     name = "Packer",
@@ -147,7 +150,7 @@ local mappings = {
     },
     t = { "<cmd>Trouble document_diagnostics<cr>", "Trouble" },
   },
-  s = {
+  S = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -174,4 +177,3 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
-
