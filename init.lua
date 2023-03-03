@@ -20,5 +20,6 @@ require("user.autopairs")
 require("user.lastplace")
 require("user.trouble")
 require("user.vimtex")
+require("user.session")
 
 require("impatient")
