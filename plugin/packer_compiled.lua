@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
     url = "https://git.sr.ht/~nedia/auto-save.nvim"
   },
+  ["auto-session"] = {
+    loaded = true,
+    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -234,6 +239,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/rnvimr",
     url = "https://github.com/kevinhwang91/rnvimr"
+  },
+  ["session-lens"] = {
+    loaded = true,
+    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/session-lens",
+    url = "https://github.com/rmagatti/session-lens"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,

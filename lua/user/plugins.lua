@@ -83,6 +83,10 @@ return require('packer').startup(function(use)
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
 
+  -- sessions
+  use "rmagatti/auto-session"
+  use "rmagatti/session-lens"
+
   -- surround: Add/change/delete surrouding delimiter pairs
   use({
     "kylechui/nvim-surround",
