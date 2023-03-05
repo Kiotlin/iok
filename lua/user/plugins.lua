@@ -119,8 +119,8 @@ return require('packer').startup(function(use)
   ---------------- utility plugins ----------------
   -- comment
   use "numToStr/Comment.nvim"
-  -- autosave
-  use "https://git.sr.ht/~nedia/auto-save.nvim"
+  -- autosave 
+  use "okuuva/auto-save.nvim"
   -- autopairs
   use "windwp/nvim-autopairs"
   -- lastplace: save your cursor position

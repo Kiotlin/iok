@@ -92,7 +92,7 @@ _G.packer_plugins = {
   ["auto-save.nvim"] = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
-    url = "https://git.sr.ht/~nedia/auto-save.nvim"
+    url = "https://github.com/okuuva/auto-save.nvim"
   },
   ["auto-session"] = {
     loaded = true,
