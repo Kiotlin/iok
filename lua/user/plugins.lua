@@ -42,16 +42,16 @@ return require('packer').startup(function(use)
   -- My plugins:
   use "wbthomason/packer.nvim"
   use "nvim-lua/plenary.nvim" -- Dependency which implements some useful window management
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
 
   -- colorscheme
   -- use "shaunsingh/nord.nvim" -- Neovim theme based off of the Nord Color Palette
   use "marko-cerovac/material.nvim"
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- Buffer completions
-  use "hrsh7th/cmp-path" -- Path completions
+  use "hrsh7th/nvim-cmp"    -- The completion plugin
+  use "hrsh7th/cmp-buffer"  -- Buffer completions
+  use "hrsh7th/cmp-path"    -- Path completions
   use "hrsh7th/cmp-cmdline" -- Cmdline completions
   -- cmp snippet
   use "L3MON4D3/LuaSnip"
@@ -119,8 +119,8 @@ return require('packer').startup(function(use)
   ---------------- utility plugins ----------------
   -- comment
   use "numToStr/Comment.nvim"
-  -- autosave 
-  use "okuuva/auto-save.nvim"
+  -- autosave
+  use "Kiotlin/auto-save.nvim"
   -- autopairs
   use "windwp/nvim-autopairs"
   -- lastplace: save your cursor position
@@ -135,7 +135,10 @@ return require('packer').startup(function(use)
   use "kevinhwang91/rnvimr"
 
   ---------------- language support ----------------
+  -- Latex
   use "lervag/vimtex"
+  -- Markdown
+  use "iamcco/markdown-preview.nvim"
 
   -- Automatically set up configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -3,6 +3,18 @@ if not status_ok then
   return
 end
 
+local get_buf_name = vim.api.nvim_buf_get_name
+local get_c_buf = vim.api.nvim_get_current_buf
+
+function get_splited_table(txt, deli)
+  local parts = {}
+  for part in string.gmatch(txt, "([^/]+)") do
+    table.insert(parts, part)
+  end
+
+  return parts
+end
+
 require("auto-save").setup({
   -- The name of the augroup.
   augroup_name = "AutoSavePlug",
@@ -29,9 +41,16 @@ require("auto-save").setup({
   -- Define some filetypes to explicitly not save, in case our existing conditions
   -- don't quite catch all the buffers we'd prefer not to write to.
   exclude_ft = {},
+  condition = function(buf)
+    local sl = get_splited_table(get_buf_name(get_c_buf()), "/")
+    if sl[#sl] == "plugins.lua" then
+      return false
+    end
+    return true
+  end,
   callbacks = {
     before_saving = function()
       vim.lsp.buf.formatting_sync()
     end
-  }
+  },
 })
