@@ -5,7 +5,7 @@ local term_opts = { silent = true }
 -- shorten function name
 local keymap = vim.api.nvim_set_keymap
 
--- Remap space as leader key 
+-- Remap space as leader key
 keymap("", "<space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -19,10 +19,12 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Line Moving
+keymap("n", "H", "0", opts)
+keymap("n", "L", "$", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
@@ -34,8 +36,8 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "J", "<Nop>", opts)
 keymap("n", "K", "<Nop>", opts)
-keymap("n", "<S-j>", ":bnext<CR>", opts)
-keymap("n", "<S-k>", ":bprevious<CR>", opts)
+keymap("n", "<C-j>", ":bnext<CR>", opts)
+keymap("n", "<C-k>", ":bprevious<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
