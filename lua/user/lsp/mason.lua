@@ -1,22 +1,24 @@
 local servers = {
-	-- "sumneko_lua",
-	-- "quick_lint_js",
-	-- "texlab",
+  -- "sumneko_lua",
+  -- "quick_lint_js",
+  -- "texlab",
   "lua_ls",
-  "denols",
+  "tsserver",
+  "html",
+  "tailwindcss",
 }
 
 local settings = {
-	ui = {
-		border = "double",
-		icons = {
-			package_installed = "◍",
-			package_pending = "◍",
-			package_uninstalled = "◍",
-		},
-	},
-	log_level = vim.log.levels.INFO,
-	max_concurrent_installers = 4,
+  ui = {
+    border = "double",
+    icons = {
+      package_installed = "◍",
+      package_pending = "◍",
+      package_uninstalled = "◍",
+    },
+  },
+  log_level = vim.log.levels.INFO,
+  max_concurrent_installers = 4,
 }
 
 require("mason").setup(settings)
@@ -34,11 +36,26 @@ for _, server in pairs(servers) do
     capabilities = require("user.lsp.handlers").capabilities,
   }
 
-  server = vim.split(server, "@")[1]
+  if server == "tsserver" then
+    opts.filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact",
+      "typescript.tsx" }
+    opts.cmd = { "typescript-language-server", "--stdio" }
+  end
 
-  local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)
-  if require_ok then
-    opts = vim.tbl_deep_extend("force", conf_opts, opts)
+  if server == "lua_ls" then
+    opts.settings = {
+      Lua = {
+        diagnostics = {
+          -- Get the language server to recognize the 'Vim' global
+          globals = { 'vim' },
+        },
+        workspace = {
+          -- Make the server aware of Neovim runtime files
+          library = vim.api.nvim_get_runtime_file("", true),
+          checkThirdParty = false,
+        }
+      }
+    }
   end
 
   lspconfig[server].setup(opts)
