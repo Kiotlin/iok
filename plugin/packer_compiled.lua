@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["auto-save.nvim"] = {
-    loaded = true,
-    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
-    url = "https://github.com/Kiotlin/auto-save.nvim"
-  },
   ["auto-session"] = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/auto-session",
@@ -129,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -153,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -178,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -239,6 +239,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "/Users/ri1ken/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
   },
   rnvimr = {
     loaded = true,

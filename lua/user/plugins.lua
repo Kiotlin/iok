@@ -53,11 +53,12 @@ return require('packer').startup(function(use)
   use "hrsh7th/cmp-buffer"  -- Buffer completions
   use "hrsh7th/cmp-path"    -- Path completions
   use "hrsh7th/cmp-cmdline" -- Cmdline completions
-  -- cmp snippet
+  -- cmp snippet engine
   use "L3MON4D3/LuaSnip"
-  use "saadparwaiz1/cmp_luasnip"
-  use "hrsh7th/cmp-nvim-lua"
+  -- use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-nvim-lua" -- nvim-cmp source for neovim lua api
   use "rafamadriz/friendly-snippets"
+  use "onsails/lspkind.nvim"
 
   -- lsp
   use "neovim/nvim-lspconfig"
@@ -65,6 +66,8 @@ return require('packer').startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   use "hrsh7th/cmp-nvim-lsp"
   use 'folke/trouble.nvim'
+  use "jose-elias-alvarez/null-ls.nvim"
+  use "MunifTanjim/prettier.nvim"
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
@@ -120,7 +123,7 @@ return require('packer').startup(function(use)
   -- comment
   use "numToStr/Comment.nvim"
   -- autosave
-  use "Kiotlin/auto-save.nvim"
+  -- use "Kiotlin/auto-save.nvim"
   -- autopairs
   use "windwp/nvim-autopairs"
   -- lastplace: save your cursor position
