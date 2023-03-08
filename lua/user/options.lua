@@ -9,7 +9,7 @@ opt.fileencoding = "utf-8"
 opt.hlsearch = true
 opt.ignorecase = true
 opt.mouse = "a"
-opt.pumheight = 10 -- pop up menu height
+opt.pumheight = 10  -- pop up menu height
 opt.showmode = true -- hide something like '-- INSERT --'
 opt.showtabline = 2
 opt.smartcase = true
@@ -34,10 +34,9 @@ opt.wrap = true
 opt.linebreak = true
 opt.scrolloff = 8
 opt.sidescrolloff = 8
-opt.whichwrap = "bs<>[]hl"
+-- opt.whichwrap = "bs<>[]hl"
 
 opt.shortmess:append "c"
 opt.runtimepath:remove("/usr/share/vim/vimfiles")
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-
+-- vim.cmd "set whichwrap+=<,>,[,],h,l"
