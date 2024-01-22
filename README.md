@@ -11,12 +11,13 @@
 2. Back up original config files.
 
 ```
-mv ~/.config/nvim{,.bak}
+mv ~/.config/nvim{,.lazy.bak}
 ```
 
 3. Cover the original folder with **iok**
 
 ```
+git clone https://github.com/Kiotlin/iok.git path/to/iok
 mv path/to/iok ~/.config/nvim
 ```
 
